@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="white">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <title>Live Transcription App</title>
+
+</head>
+
+<body>
+  <section id="welcomePage">
+    <img src="logo.jpg">
+  </section>
+  <section class="demoSection">
+    <div id="hangerTextContainer">
+      <div id="hangers">
+        <div></div>
+        <div></div>
+      </div>
+      <div id="hangerTextBox">
+        <div></div>
+        <p>Quick Demo</p>
+        <div></div>
+      </div>
+    </div>
+    <div id="demoContainer">
+      <div id="demoContainerContents">
+        <div id="imgContainer1">
+          <div id="imageArea">
+            <img id="img" src="/photo1.jpg">
+          </div>
+          <div id="demoTextArea1">
+            <p id="demoTexts1" style="font-size: 11px;">
+              <b>1</b> Click on Microphone button to start voice transcribe recording. <br><br><b>2</b> Use power off button to stop voice transcribe recording. <br><br><b>3</b> The read-out-loud button reads out recorded voice and transcribe text. <br><br><b>4</b> This button clears out transcribe text from the output container.
+            </p>
+          </div>
+        </div>
+        <div id="imgContainer2">
+          <div id="imageArea">
+            <img id="img" src="/photo2.jpg">
+          </div>
+          <div id="demoTextArea2" style="font-size: 14px;">
+            <p id="demoTexts2"><b>5</b> Website application menu button.</p>
+          </div>
+        </div>
+        <div id="imgContainer3">
+          <div id="imageArea">
+            <img id="img" src="/photo3.jpg">
+          </div>
+          <div id="demoTextArea3" style="font-size: 14px;">
+            <p id="demoTexts3"><b>6</b> Recorded voice transcription into texts.
+              <br><br><b>7</b> Date and time text content for transcribed text. <br><br>
+              <b>8</b> Menu button for transcription text content container.
+            </p>
+          </div>
+        </div>
+        <div id="imgContainer4">
+          <div id="imageArea">
+            <img id="img" src="/photo4.jpg">
+          </div>
+          <div id="demoTextArea4" style="font-size: 14px;">
+            <p id="demoTexts4"><b>9</b> The edit button allows you to edit transcribed text if you encounter incorrect transcribed text from the voice recording. <br><br><b>10</b> This button allows you delete transcribed text and date of transcription
+            </p>
+          </div>
+        </div>
+        <div id="imgContainer5">
+          <div id="imageArea">
+            <img id="img" src="/photo5.jpg">
+          </div>
+          <div id="demoTextArea5" style="font-size: 14px;">
+            <p id="demoTexts5"><b>11</b> Close edit transcription cover layer <br><br><b>12</b> Input text area where you can edit your transcribed text manually to match voice recorded. <br><br><b>13</b> Save edited input.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mainProject">
+    <header class="headText">
+      <div id="moreTab">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <center id="headerText">Transcribe: Voice to Text</center>
+    </header>
+    <section id="aboutSection">
+      <h5 id="showDemo" onclick="showDemo()">How to use</h5>
+      <div id="credit">
+        <p style="text-decoration: underline;">Credits:</p>
+        <p>Hi, we're the developers Davis Jackson, Wales and Davidson Debra, USA. We are an independent developer.
+          we develop web applications for mobile and desktop. we want to continue developing app full-time and release a lot of app on this platform, to help the internet community enjoy useful tools and ease-of-use apps. If you like my cause or you just enjoy what we offer, please donate. if you can't donate, maybe you can review the application or share it on the social network.</p>
+        <div id="helpContainer">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </div>
+    </section>
+    <section id="transcriptSection">
+      <div id="transcriptSectionCover">
+
+      </div>
+      <div id="startTranscriptionButton">
+        <i onclick="startTranscription()" class="fa-solid fa-microphone-lines"></i>
+        <p>Record</p>
+      </div>
+      <div id="transcriptionCtrlButton">
+        <i class="fa fa-power-off" onclick="stopTranscription()"></i>
+        <i class="fa-solid fa-volume-high" onclick="readOutLoud()"></i>
+        <i class="fa-solid fa-xmark" onclick="clearTranscription()"></i>
+      </div>
+      <div id="transcriptOutputCover">
+        <div id="transcriptionOutputContainer">
+          <div id="transcriptionOutput">
+            <p id="transcriptionText"></p>
+            <div id="transcriptionTimeContainer">
+              <p id="transcriptionTime"></p>
+            </div>
+          </div>
+          <i class="fa fa-ellipsis-vertical"></i>
+        </div>
+        <div id="transcriptionOutputOptions">
+          <i id="editTranscriptButton" class="fa-regular fa-pen-to-square"></i>
+          <i id="deleteTranscriptionContainer" class="fa fa-trash"></i>
+        </div>
+      </div>
+    </section>
+    <div id="editTranscriptContainer">
+      <i id="closeEditContainer" class="fa fa-times"></i>
+      <div id="editContainer">
+        <input type="text" id="editedTranscriptInput" placeholder="Edit the transcript">
+        <i onclick="editTranscript()" class="fa-solid fa-floppy-disk"></i>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="main.js"></script>
+
+</html>
